@@ -207,8 +207,6 @@ class ComplexType(AnyType):
             )
         else:
             elements = deque(xmlelement.iterchildren())
-            if allow_none and len(elements) == 0 and len(attributes) == 0:
-                return None
 
             # Parse elements. These are always indicator elements (all, choice,
             # group, sequence)

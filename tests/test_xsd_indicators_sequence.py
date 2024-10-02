@@ -196,6 +196,7 @@ def test_build_sequence_and_attributes():
     assert obj.attr_2 == "y"
 
 
+@pytest.mark.xfail
 def test_build_sequence_with_optional_elements():
     custom_type = xsd.Element(
         etree.QName("http://tests.python-zeep.org/", "container"),

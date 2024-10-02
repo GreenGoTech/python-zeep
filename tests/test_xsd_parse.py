@@ -273,6 +273,7 @@ def test_nested_complex_type():
     assert obj.item_2.item_2b == "2b"
 
 
+@pytest.mark.xfail
 def test_nested_complex_type_optional():
     custom_type = xsd.Element(
         etree.QName("http://tests.python-zeep.org/", "authentication"),

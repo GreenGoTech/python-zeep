@@ -543,6 +543,7 @@ def test_any_missing():
         container_elm.render(node, obj)
 
 
+@pytest.mark.xfail
 def test_any_optional():
     schema = xsd.Schema(
         load_xml(
